@@ -12,4 +12,18 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  about(){
+    window.scrollTo(500,500)
+  }
+
+  services(){
+    
+  }
+
+  portfolio(){
+
+  }
+  contact(){
+
+  }
 }
