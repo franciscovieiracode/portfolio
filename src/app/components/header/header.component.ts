@@ -16,14 +16,10 @@ export class HeaderComponent implements OnInit {
     window.scrollTo(500,500)
   }
 
-  services(){
+  portfolio(){
     
   }
-
-  portfolio(){
-
-  }
   contact(){
-
+    alert(123)
   }
 }
