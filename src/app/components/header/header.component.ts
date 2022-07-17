@@ -13,13 +13,13 @@ export class HeaderComponent implements OnInit {
   }
 
   about(){
-    window.scrollTo(500,500)
+    document.getElementById('about')?.scrollIntoView()
   }
 
   portfolio(){
-    
+    document.getElementById('portfolio')?.scrollIntoView()
   }
   contact(){
-    alert(123)
+    document.getElementById('contact')?.scrollIntoView()
   }
 }

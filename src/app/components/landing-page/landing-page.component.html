@@ -1,8 +1,9 @@
 <div *ngIf="getState()==true">
-<app-header></app-header>
-<app-about></app-about>
-<app-portfolio></app-portfolio>
-<app-contact></app-contact>
+    <app-header></app-header>
+    <app-about id="about"></app-about>
+    <app-portfolio id="portfolio"></app-portfolio>
+    <app-contact id="contact"></app-contact>
+    <button id="btn" (click)="topFunction()">Back to the top</button>
 </div>
 <div *ngIf="getState() ==false">
     <app-header></app-header>

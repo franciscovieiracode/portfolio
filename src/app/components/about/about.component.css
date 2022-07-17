@@ -1,4 +1,30 @@
-:host ::ng-deep .aboutBg{
+::ng-deep .aboutBg{
     max-width: 100%;
     max-height: 100%;
+    background: url('../../../assets/images/aboutBg.jpg');
+    background-size:cover;
+    position:relative;
 }
+
+.all{
+    position: relative;
+}
+
+.container { 
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: calc((28vw - 1.5rem) / 11);
+    max-width: 80%;
+  }
+
+  .name{
+    font-size: calc((46vw - 1.5rem) / 11);
+    
+}
+
+.description{
+    max-width: 50%;
+    line-height: 180%;
+}
+

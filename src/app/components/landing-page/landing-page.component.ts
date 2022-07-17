@@ -18,13 +18,18 @@ export class LandingPageComponent implements  OnInit  {
       this.setState()
     }, 1500);
   }
-  
+
   setState(){
     this.loaded = true
   }
 
   getState(){
     return this.loaded
+  }
+
+  topFunction(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
 }
