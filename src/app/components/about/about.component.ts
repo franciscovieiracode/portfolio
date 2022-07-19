@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -9,10 +10,14 @@ export class AboutComponent implements OnInit {
 
   @Input() loaded:boolean = false
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.loaded = true;
   }
+
+  insta(){
+    this.router.navigateByUrl("/123")
+}
 
 }

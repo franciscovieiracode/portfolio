@@ -1,30 +1,44 @@
 ::ng-deep .aboutBg{
-    max-width: 100%;
-    max-height: 100%;
-    background: url('../../../assets/images/aboutBg.jpg');
+    width: 100%;
+    height: auto;
     background-size:cover;
     position:relative;
 }
 
 .all{
     position: relative;
+    height: auto;
 }
 
 .container { 
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 10%;
-    font-size: calc((28vw - 1.5rem) / 11);
     max-width: 80%;
+    font-size: calc((22vw - 1.5rem) / 10);
   }
 
   .name{
-    font-size: calc((46vw - 1.5rem) / 11);
-    
-}
+    font-size: calc((30vw - 1.5rem) / 10);
+  }
 
 .description{
     max-width: 50%;
     line-height: 180%;
 }
+.button{
+    padding: 2%;
+}
 
+@media (max-width: 767.98px) {
+    .container{
+        font-size: calc((26vw - 1.5rem) / 10);
+    }
+    .name{
+        font-size: calc((30vw - 1.5rem) / 10);
+
+    }
+    .btn{
+        font-size: 3px;
+    }
+ }

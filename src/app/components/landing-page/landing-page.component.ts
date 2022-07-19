@@ -16,7 +16,7 @@ export class LandingPageComponent implements  OnInit  {
   ngOnInit(): void {
     setTimeout(() => {
       this.setState()
-    }, 1500);
+    }, 0);
   }
 
   setState(){
