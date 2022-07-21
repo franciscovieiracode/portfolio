@@ -16,8 +16,9 @@ export class AboutComponent implements OnInit {
     this.loaded = true;
   }
 
-  insta(){
-    this.router.navigateByUrl("/123")
-}
+  openCV(){
+    let URL = "../../../../assets/cv/cv.pdf";    
+      window.open(URL); 
+  }
 
 }

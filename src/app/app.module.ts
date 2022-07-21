@@ -19,7 +19,7 @@ import { TestComponent } from './test/test.component';
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
-    TestComponent
+    TestComponent,
   ],
   imports: [
     BrowserModule,

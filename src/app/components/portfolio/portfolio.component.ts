@@ -12,4 +12,7 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  detailed(){
+    alert(123)
+  }
 }
