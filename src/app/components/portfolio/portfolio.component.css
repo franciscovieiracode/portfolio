@@ -6,3 +6,16 @@
 .title{
     font-size: 150%;
 }
+
+.modalIMG{
+    max-width: 90%;
+    max-height: 90%;
+}
+.hl { position: relative; }
+.hl:before {
+  position: absolute;
+  right: 0%; bottom: 2%; left: 0%;
+  height: 2px;
+  background: darkslategray;
+  content: '';
+}

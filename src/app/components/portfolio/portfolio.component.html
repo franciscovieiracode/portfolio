@@ -6,7 +6,7 @@
             <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
             <div class="container d-flex justify-content-center">
                 <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="detailed()" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
+                <button (click)="open(mymodal,0)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
             </div>
         </div>
         <div class="col border m-2">
@@ -14,7 +14,7 @@
             <p class="lead">Updated prices and more of top 30 cryptocurrencies by marketcap, data retrived from Binance public API and its being refreshed every 5 seconds</p>
             <div class="extra container d-flex justify-content-center">
                 <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="detailed()" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
+                <button (click)="open(mymodal,1)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
             </div>
         </div>
         <div class="col border m-2">
@@ -22,7 +22,7 @@
             <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
             <div class="container d-flex justify-content-center">
                 <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="detailed()" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
+                <button (click)="open(mymodal,2)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
             <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
             <div class="container d-flex justify-content-center">
                 <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="detailed()" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
+                <button (click)="open(mymodal,3)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
             </div>
         </div>
         <div class="col border m-2">
@@ -41,7 +41,7 @@
             <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
             <div class="container d-flex justify-content-center">
                 <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="detailed()" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
+                <button (click)="open(mymodal,4)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
             </div>
         </div>
         <div class="col border m-2">
@@ -49,8 +49,51 @@
             <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
             <div class="container d-flex justify-content-center">
                 <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="detailed()" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
+                <button (click)="open(mymodal,5)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
             </div>
         </div>
     </div>
 </div>
+<!--Horizontal line-->
+<div class="hl mt-3 p-2"></div>
+   
+<!--Modal-->
+<ng-template #mymodal let-modal>
+  <div *ngIf="dataFull">
+    <div class="modal-header">
+    <p class="col-12 modal-title text-center display-5 lead" id="modal-basic-title">{{dataFull.title}}</p>
+  </div>
+  <div class="modal-body ">
+    <div class="container text-center">
+        <div class="mb-4">{{dataFull.description}}</div>
+        <div><img class="modalIMG mt-2 " src={{dataFull.images}} alt=""></div>
+    </div>
+    <div *ngIf="dataFull.tech">
+    <p class="display-6 lead text-center mt-3 pb-2">Used Tech</p>
+    <div *ngFor="let tech of dataFull.tech">
+        <ul class="list-group">
+            <li class="list-group-item">
+              <a>{{tech}} <img src="../../../assets/images/detailed tech/{{tech}}.jpg" height="50" alt=""></a>
+            </li>
+          </ul>
+    </div>
+  </div>
+</div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
+  </div>
+</div>
+<div *ngIf="!dataFull">
+    <div class="modal-header">
+        <p class="col-12 modal-title text-center display-5 lead" id="modal-basic-title">Not Found</p>
+      </div>
+      <div class="modal-body ">
+        <div class="container text-center">
+            <div class="mb-4">Project Not Found or error with data files, please try again later </div>
+        </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
+      </div>
+</div>
+</ng-template>

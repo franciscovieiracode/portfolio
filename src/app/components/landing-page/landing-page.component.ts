@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, Host } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -17,6 +17,7 @@ export class LandingPageComponent implements  OnInit  {
     setTimeout(() => {
       this.setState()
     }, 0);
+
   }
 
   setState(){
@@ -32,4 +33,16 @@ export class LandingPageComponent implements  OnInit  {
     document.documentElement.scrollTop = 0;
   }
 
+  @HostListener("document:scroll")
+  scrollFunction(){
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      (<HTMLInputElement>document.getElementById("btn")).style.display = "block";
+    } else {
+      (<HTMLInputElement>document.getElementById("btn")).style.display = "none";
+    }
+
+  }
 }

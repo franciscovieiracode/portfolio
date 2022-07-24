@@ -9,7 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { TestComponent } from './test/test.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ClipboardModule } from 'ngx-clipboard';
+
+
 
 @NgModule({
   declarations: [
@@ -19,12 +22,13 @@ import { TestComponent } from './test/test.component';
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,23 @@
-.aboutBg{
+.imgBg{
     width: 100%;
     height: 47.5rem;
 }
 
-.container{
-    position: absolute;
-}
-
 .container-fluid{
     position: relative;
+    overflow-x: hidden;
     padding: 0%;
+    
+    
 }
-.title{
-    position: absolute;
+.text{
+    text-decoration: none;
+    color: black;
 }
+
+@media (max-width: 575.98px) { 
+    .imgBg{
+        width: 100%;
+        height: auto;
+    }
+ }
