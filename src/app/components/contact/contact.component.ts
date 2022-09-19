@@ -10,19 +10,24 @@ import { delay } from 'rxjs';
 export class ContactComponent implements OnInit {
 
   copied:boolean
+  mobile: boolean;
 
   constructor(private clipboardApi: ClipboardService) {
     this.copied=false
+    this.mobile=false
    }
 
   ngOnInit(): void {
+    if (window.screen.width === 360) { // 768px portrait
+      this.mobile = true;
   }
+}
 
   copy(){
     this.clipboardApi.copyFromContent("franciscovieiracode@gmail.com")
     this.copied=true
     
-    setTimeout(()=>{this.copied=false},3000)
+    setTimeout(()=>{this.copied=false},1000)
   }
 
 

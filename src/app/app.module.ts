@@ -11,6 +11,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ClipboardModule } from 'ngx-clipboard';
+import { TesteComponent } from './teste/teste.component';
 
 
 
@@ -22,6 +23,7 @@ import { ClipboardModule } from 'ngx-clipboard';
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
+    TesteComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,10 +7,11 @@
     font-size: 150%;
 }
 
-.modalIMG{
-    max-width: 90%;
-    max-height: 90%;
+.imgCarousel{
+    width: 42rem;
+    height: 23rem;
 }
+
 .hl { position: relative; }
 .hl:before {
   position: absolute;
@@ -19,3 +20,10 @@
   background: darkslategray;
   content: '';
 }
+@media (max-width: 575.98px) { 
+    .imgCarousel{
+        width: 100%;
+        height: 14rem;
+    }
+ }
+

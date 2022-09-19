@@ -2,13 +2,16 @@
         <p class="display-4 lead text-center ">Contact me</p>
             <div class="container p-4">
                 <div class="row text-center mt-3">
-                    <a class="text" href="https://www.linkedin.com/in/francisco-vieira1999" target=”_blank”><img src="../../../assets/images/linkedin.png" height="45" class="rounded-circle m-2" alt="">/in/francisco-vieira1999/</a>
-                    <a class="text" href="https://www.instagram.com/_dupre_/" target=”_blank”><img src="../../../assets/images/instaLogo.jpg" height="45" class="rounded-circle m-2" alt="">@_dupre_</a>
-                    <button class="btn text" (click)="copy()" target=”_blank”><img src="../../../assets/images/email.jpg" height="45" class="rounded-circle m-2" alt="">franciscovieiracode@gmail.com</button>
-                    <div *ngIf="copied" class="alert alert-secondary" role="alert">
+                    <a class="text col-6" href="https://www.linkedin.com/in/francisco-vieira1999" target=”_blank”><img src="../../../assets/images/linkedin.png" height="45" class="rounded-circle m-2" alt="">/in/francisco-vieira1999/</a>
+                    <a class="text col-6" href="https://www.instagram.com/_dupre_/" target=”_blank”><img src="../../../assets/images/instaLogo.jpg" height="45" class="rounded-circle m-2" alt="">@_dupre_</a>
+                </div>
+                <div class="row text-center">
+                    <button *ngIf="!copied && mobile" class="btn text col-6" (click)="copy()" target=”_blank”><img src="../../../assets/images/email.jpg" height="45" class="rounded-circle m-2" alt="">franciscovieiracode @gmail.com</button>
+                    <button *ngIf="!copied && !mobile" class="btn text col-6" (click)="copy()" target=”_blank”><img src="../../../assets/images/email.jpg" height="45" class="rounded-circle m-2" alt="">franciscovieiracode@gmail.com</button>
+                    <div *ngIf="copied" class="alert alert-secondary col-6" role="alert">
                         Copied email to clipboard!
                       </div>
-                    <a class="text" href="https://github.com/franciscovieiracode" target=”_blank”><img src="../../../assets/images/github.jpg" height="45" class="rounded-circle m-2" alt="">/franciscovieiracode</a>
+                    <a class="text col-6" href="https://github.com/franciscovieiracode" target=”_blank”><img src="../../../assets/images/github.jpg" height="45" class="rounded-circle m-2" alt="">/franciscovieiracode</a>
                 </div>
         </div>
     </div>
