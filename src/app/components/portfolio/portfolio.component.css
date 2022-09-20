@@ -1,7 +1,11 @@
-:host ::ng-deep .imgLogo{
-    max-width: 100%;
-    max-height: 100%;
+::ng-deep body, html{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
+
 
 .title{
     font-size: 150%;
@@ -12,18 +16,41 @@
     height: 23rem;
 }
 
-.hl { position: relative; }
-.hl:before {
-  position: absolute;
-  right: 0%; bottom: 2%; left: 0%;
-  height: 2px;
-  background: darkslategray;
-  content: '';
-}
 @media (max-width: 575.98px) { 
     .imgCarousel{
         width: 100%;
         height: 14rem;
     }
  }
+  
+  .box {
+    max-width: 25rem;
+    max-height: 20rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    opacity: 0.75;
+    overflow: hidden;
+    transition: 1.5s;
+  }
+  
+  .image:hover {
+    opacity: 1;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    transition-timing-function: ease-in;
+    transition: 1s;
+  }
+  
+.button{
+    position: relative;
+}
 

@@ -3,7 +3,7 @@
     <app-about id="about"></app-about>
     <app-portfolio id="portfolio"></app-portfolio>
     <app-contact id="contact"></app-contact>
-    <button class="btn btn-danger btn-floating btn-sm" id="btn" (click)="topFunction()">Back to the top</button>
+    <a (click)="topFunction()" id="btn" class="btn"><img src="../../../assets/images/upperArrow.jpg" height="50"></a>
 </div>
 <div *ngIf="getState() ==false">
     <app-header></app-header>

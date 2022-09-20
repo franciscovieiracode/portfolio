@@ -1,61 +1,47 @@
-<div class="container mt-4">
-    <p class="display-3 lead text-center mb-5 mt-5">Portfolio</p>
-    <div class="row m-2">
-        <div class="col border m-2">
-            <p class="title text-center mt-2">Real Estate Agency</p>
-            <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
-            <div class="container d-flex justify-content-center">
-                <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="open(mymodal,0)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
-            </div>
-        </div>
-        <div class="col border m-2">
-            <p class="title text-center mt-2">Crypto Prices</p>
-            <p class="lead">Updated prices and more of top 30 cryptocurrencies by marketcap, data retrived from Binance public API and its being refreshed every 5 seconds</p>
-            <div class="extra container d-flex justify-content-center">
-                <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="open(mymodal,1)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
-            </div>
-        </div>
-        <div class="col border m-2">
-            <p class="title text-center mt-2">Real Estate Agency</p>
-            <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
-            <div class="container d-flex justify-content-center">
-                <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="open(mymodal,2)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
-            </div>
-        </div>
+<!--Teste-->
+<div class="container mb-4">
+  <p class="display-3 lead text-center mb-5 mt-5"><strong>Portfolio</strong></p>
+  <div class="row ">
+    <div class="col-md">
+      <p class="text text-center title lead mt-2">Real Estate Agency</p>
+      <div class="box">
+        <a (click)="open(mymodal,0)"><img class="image" src="../../../assets/images/detailedProject/realEstateMain.jpg"></a>
+      </div>
     </div>
-    {{ '' // next row }}
-    <div class="row m-2">
-        <div class="col border m-2">
-            <p class="title text-center mt-2">Real Estate Agency</p>
-            <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
-            <div class="container d-flex justify-content-center">
-                <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="open(mymodal,3)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
-            </div>
-        </div>
-        <div class="col border m-2">
-            <p class="title text-center mt-2">Real Estate Agency</p>
-            <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
-            <div class="container d-flex justify-content-center">
-                <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="open(mymodal,4)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
-            </div>
-        </div>
-        <div class="col border m-2">
-            <p class="title text-center mt-2">Real Estate Agency</p>
-            <p class="lead">A Real Estate agency that allows users to view and follow property, and agents to do all things mentioned previously plus managing the properties</p>
-            <div class="container d-flex justify-content-center">
-                <a href="https://github.com/franciscovieiracode" target="_blank"><img src="../../../assets/images/github.jpg" height="30" alt="" class="m-2"></a>
-                <button (click)="open(mymodal,5)" class="mb-2 btn btn-outline-dark btn-sm">Detailed info</button>
-            </div>
-        </div>
+    <div class="col-md">
+      <p class="text text-center title lead mt-2">Online Banking</p>
+      <div class="box">
+        <a (click)="open(mymodal,1)"><img class="image" src="../../../assets/images/detailedProject/bankingMain.jpg"></a>
+      </div>
     </div>
+    <div class="col-md">
+      <p class="text text-center title lead mt-2">Crypto Prices</p>
+      <div class="box">
+        <a (click)="open(mymodal,2)"><img class="image" src="../../../assets/images/detailedProject/cryptoMain.jpg"></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <p class="text text-center title lead mt-4">Timer Countdown</p>
+      <div class="box">
+        <img class="image" src="../../../assets/images/detailedProject/timerMain.jpg">
+      </div>
+    </div>
+    <div class="col-md">
+      <p class="text text-center title lead mt-4">Timer Countdown</p>
+      <div class="box">
+        <img class="image" src="https://unsplash.it/400/300?image=486">
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="box">
+        <p class="text text-center title lead mt-4">Timer Countdown</p>
+        <img class="image" src="https://unsplash.it/400/300?image=514">
+      </div>
+    </div>
+  </div>
 </div>
-<!--Horizontal line-->
-<div class="hl mt-3 p-2"></div>
    
 <!--Modal-->
 <ng-template #mymodal let-modal>
@@ -78,7 +64,7 @@
           </ngb-carousel>
     </div>
     <div *ngIf="dataFull.tech">
-    <p class="display-6 lead text-center mt-3 pb-2">Used Tech</p>
+    <p class="display-6 lead text-center mt-3 pb-2">Tech Used</p>
     <div *ngFor="let tech of dataFull.tech">
         <ul class="list-group">
             <li class="list-group-item">

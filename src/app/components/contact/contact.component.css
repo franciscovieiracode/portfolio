@@ -8,8 +8,29 @@
     overflow-x: hidden;
     padding: 0%;
     
-    
 }
+
+.email{
+    cursor: pointer;
+}
+
+
+.title1{
+    margin-top: 5%;
+}
+
+.toaster{
+    position: fixed;
+    top: 5%;
+    right: 0%;
+    background-color: lightgreen;
+}
+
+.container{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
 .text{
     text-decoration: none;
     color: black;

@@ -5,7 +5,6 @@ import { TesteComponent } from './teste/teste.component';
 
 const routes: Routes = [
   {path:'',component:LandingPageComponent},
-  {path:'teste', component:TesteComponent},
   {path:'**', redirectTo: '/'}
 ];
 
