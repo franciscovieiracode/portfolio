@@ -25,19 +25,19 @@
     <div class="col-md">
       <p class="text text-center title lead mt-4">Timer Countdown</p>
       <div class="box">
-        <img class="image" src="../../../assets/images/detailedProject/timerMain.jpg">
+        <a (click)="open(mymodal,3)"><img class="image" src="../../../assets/images/detailedProject/timerMain.jpg"></a>
       </div>
     </div>
     <div class="col-md">
-      <p class="text text-center title lead mt-4">Timer Countdown</p>
+      <p class="text text-center title lead mt-4">Sensors management</p>
       <div class="box">
-        <img class="image" src="https://unsplash.it/400/300?image=486">
+        <a (click)="open(mymodal,4)"><img class="image" src="https://unsplash.it/400/300?image=486"></a>
       </div>
     </div>
     <div class="col-md">
+      <p class="text text-center title lead mt-4">Deliveries Company</p>
       <div class="box">
-        <p class="text text-center title lead mt-4">Timer Countdown</p>
-        <img class="image" src="https://unsplash.it/400/300?image=514">
+        <a (click)="open(mymodal,4)"><img class="image" src="https://unsplash.it/400/300?image=486"></a>
       </div>
     </div>
   </div>
@@ -49,10 +49,10 @@
     <div class="modal-header">
     <p class="col-12 modal-title text-center display-5 lead" id="modal-basic-title">{{dataFull.title}}</p>
   </div>
-  <div class="modal-body ">
+  <div class="modal-body">
     <div class="container text-center">
         <div class="mb-4">{{dataFull.description}}</div>
-        <ngb-carousel>
+        <ngb-carousel [interval]="2500">
             <ng-template ngbSlide *ngFor="let img of dataFull.images; let i = index">
               <div class="picsum-img-wrapper">
                 <img class="imgCarousel" src="../../../assets/images/detailedProject/{{img}}.jpg" alt="Random first slide">
@@ -72,6 +72,9 @@
             </li>
           </ul>
     </div>
+  </div>
+  <div class="text-center mt-4">
+    <p>Find the project Source Code here: <a href="{{dataFull.github}}" target="_blank"><img src="../../../assets/images/github.jpg" height="60" alt=""></a></p>
   </div>
 </div>
   <div class="modal-footer">
