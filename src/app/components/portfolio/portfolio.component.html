@@ -31,13 +31,13 @@
     <div class="col-md">
       <p class="text text-center title lead mt-4">Sensors management</p>
       <div class="box">
-        <a (click)="open(mymodal,4)"><img class="image" src="https://unsplash.it/400/300?image=486"></a>
+        <a (click)="open(mymodal,4)"><img class="image" src="https://electronics360.globalspec.com/images/assets/988/17988/anemometer_MAIN.jpg"></a>
       </div>
     </div>
     <div class="col-md">
-      <p class="text text-center title lead mt-4">Deliveries Company</p>
+      <p class="text text-center title lead mt-4">Delivery Company</p>
       <div class="box">
-        <a (click)="open(mymodal,4)"><img class="image" src="https://unsplash.it/400/300?image=486"></a>
+        <a (click)="open(mymodal,5)"><img class="image" src="https://d23xypyp2dkdqm.cloudfront.net/wp-content/uploads/2022/01/31034059/woman-hand-accepting-delivery-boxes-from-deliveryman-1-1024x683.jpg"></a>
       </div>
     </div>
   </div>
@@ -52,16 +52,19 @@
   <div class="modal-body">
     <div class="container text-center">
         <div class="mb-4">{{dataFull.description}}</div>
+        <div *ngIf="dataFull.images">
         <ngb-carousel [interval]="2500">
             <ng-template ngbSlide *ngFor="let img of dataFull.images; let i = index">
-              <div class="picsum-img-wrapper">
+              <div class="carouselInner picsum-img-wrapper">
                 <img class="imgCarousel" src="../../../assets/images/detailedProject/{{img}}.jpg" alt="Random first slide">
               </div>
-              <div class="carousel-caption">
+              <div class="carousel carousel-caption text-dark">
                 <p>Image number #{{i+1}}.</p>
               </div>
             </ng-template>
           </ngb-carousel>
+        </div>
+        <div *ngIf="!dataFull.images"><strong>Photos not available at the moment</strong></div>
     </div>
     <div *ngIf="dataFull.tech">
     <p class="display-6 lead text-center mt-3 pb-2">Tech Used</p>
